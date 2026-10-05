@@ -335,6 +335,8 @@ function fillExample() {
   updateInputState();
   formError.hidden = true;
   sourceText.focus();
+  sourceText.setSelectionRange(0, 0);
+  sourceText.scrollTop = 0;
 }
 
 function clearInput() {
@@ -360,8 +362,8 @@ function clearInput() {
         <span class="visual-node node-two"></span>
         <span class="visual-node node-three"></span>
       </div>
-      <h3>等待一份需要整理的资料</h3>
-      <p>点击“示例资料”可以立即体验，或者粘贴你自己的学习内容。</p>
+      <h3>让知识清晰起来。</h3>
+      <p>粘贴资料，或点击“示例资料”开始。</p>
       <div class="empty-features">
         <span>摘要</span>
         <span>知识点</span>
