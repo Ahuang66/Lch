@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1ea">
+  <meta name="description" content="把杂乱学习资料变成可以直接复习的知识结构。">
+  <title>AI学习资料整理器</title>
+  <link rel="icon" href="../assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#organizer">跳到整理工具</a>
+
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <header class="app-header">
+    <div class="app-container header-inner">
+      <a class="brand" href="../index.html" aria-label="返回 AI 实验室首页">
+        <img src="../assets/logo-mark.svg" width="38" height="38" alt="">
+        <span>
+          <strong>AI实验室</strong>
+          <small>STUDY TOOL / 02</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <span class="mode-pill"><i aria-hidden="true"></i>本地模拟模式</span>
+        <a class="back-link" href="../index.html">返回实验室</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="app-container intro-inner">
+        <div>
+          <span class="eyebrow">LEARNING MATERIAL ORGANIZER</span>
+          <h1>AI学习资料整理器</h1>
+          <p>把杂乱资料，变成可以直接复习的知识结构。</p>
+        </div>
+        <div class="intro-note">
+          <span>当前版本</span>
+          <strong>本地规则整理</strong>
+          <p>不上传资料，不需要账号，也不需要联网调用 AI。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="organizer" aria-labelledby="workspace-title">
+      <h2 class="sr-only" id="workspace-title">资料整理工作区</h2>
+      <div class="app-container workspace">
+        <section class="input-panel" aria-labelledby="input-title">
+          <div class="panel-heading">
+            <div>
+              <span class="panel-index">01 / INPUT</span>
+              <h2 id="input-title">粘贴学习资料</h2>
+            </div>
+            <span class="char-count"><strong id="char-count">0</strong> 字</span>
+          </div>
+
+          <p class="panel-help">支持教材段落、课堂笔记、文章、复习提纲等纯文字内容。</p>
+
+          <div class="input-toolbar">
+            <button class="text-button" id="example-button" type="button">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3h9l3 3v11H4z"></path><path d="M13 3v4h4M7 11h6M7 14h4"></path></svg>
+              示例资料
+            </button>
+            <button class="text-button muted" id="clear-button" type="button">清空</button>
+          </div>
+
+          <label class="sr-only" for="source-text">学习资料内容</label>
+          <textarea id="source-text" placeholder="在这里粘贴学习资料……&#10;&#10;例如：鸦片战争后，中国经济结构发生重要变化。自然经济逐步解体，商品经济发展，外国资本主义和民族资本主义先后兴起……"></textarea>
+
+          <div class="input-footer">
+            <span id="input-status" role="status">建议输入 100 字以上，整理结果会更稳定。</span>
+            <span class="keyboard-hint">Ctrl / ⌘ + Enter</span>
+          </div>
+
+          <div class="form-error" id="form-error" role="alert" hidden></div>
+
+          <button class="primary-button" id="organize-button" type="button">
+            <span>开始整理</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"></path></svg>
+          </button>
+        </section>
+
+        <section class="output-panel" aria-labelledby="output-title">
+          <div class="output-topbar">
+            <div>
+              <span class="panel-index">02 / OUTPUT</span>
+              <h2 id="output-title">结构化学习结果</h2>
+            </div>
+            <button class="copy-button" id="copy-button" type="button" hidden>复制整理结果</button>
+          </div>
+
+          <div class="output-content" id="output-content" aria-live="polite">
+            <div class="empty-state">
+              <div class="empty-visual" aria-hidden="true">
+                <div class="paper-sheet paper-back"></div>
+                <div class="paper-sheet paper-front">
+                  <span class="paper-dot"></span>
+                  <span class="paper-line wide"></span>
+                  <span class="paper-line"></span>
+                  <span class="paper-line short"></span>
+                  <span class="paper-block"></span>
+                  <span class="paper-line wide"></span>
+                  <span class="paper-line short"></span>
+                </div>
+                <span class="visual-node node-one"></span>
+                <span class="visual-node node-two"></span>
+                <span class="visual-node node-three"></span>
+              </div>
+              <h3>等待一份需要整理的资料</h3>
+              <p>点击“示例资料”可以立即体验，或者粘贴你自己的学习内容。</p>
+              <div class="empty-features">
+                <span>摘要</span>
+                <span>知识点</span>
+                <span>概念</span>
+                <span>复习题</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="app-container footer-inner">
+      <span>AI实验室 · 学习工具原型</span>
+      <span>本地规则处理，不保存输入内容</span>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
