@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f2">
+  <meta name="description" content="AI实验室：用 AI 做东西，并记录真实结果。">
+  <title>AI实验室｜用 AI 做东西，并记录真实结果</title>
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="AI实验室首页">
+        <img src="assets/logo-mark.svg" width="38" height="38" alt="">
+        <span class="brand-text">
+          <strong>AI实验室</strong>
+          <small>PUBLIC NOTEBOOK / 01</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>目录</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#projects">当前实验</a>
+        <a href="#completed">已完成</a>
+        <a href="#logs">实验日志</a>
+        <a href="#about">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span>个人项目公开记录 · 持续更新</div>
+          <h1 id="hero-title">
+            用 AI 做东西，<br>
+            并记录<span class="highlight">真实结果。</span>
+          </h1>
+          <p class="hero-intro">
+            这里是一名普通学生的 AI 实验室。把想法做成能运行的小工具，也把失败、修正和意外发现一并写下来。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#completed">查看已完成项目
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6"></path></svg>
+            </a>
+            <a class="button button-secondary" href="#about">了解实验室</a>
+          </div>
+          <p class="hero-note">不展示完美答案，只展示可复现的过程。</p>
+        </div>
+
+        <div class="lab-board reveal" aria-label="实验室当前状态概览">
+          <div class="board-header">
+            <div>
+              <span class="board-kicker">LAB STATUS</span>
+              <h2>实验室概览</h2>
+            </div>
+            <span class="live-badge"><i></i>运行中</span>
+          </div>
+
+          <div class="signal-card">
+            <div class="signal-meta">
+              <span>实验信号</span>
+              <span class="mono">09 / 2026</span>
+            </div>
+            <svg class="signal-chart" viewBox="0 0 520 126" role="img" aria-label="抽象实验信号折线图">
+              <defs>
+                <linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#40d3ae" stop-opacity=".32"></stop>
+                  <stop offset="100%" stop-color="#40d3ae" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <path class="chart-grid" d="M0 26h520M0 63h520M0 100h520M86 0v126M173 0v126M260 0v126M347 0v126M434 0v126"></path>
+              <path class="chart-area" d="M0 101 C35 96 54 76 82 82 S128 105 158 73 S210 31 246 51 S295 89 329 61 S367 31 403 44 S462 67 520 18 V126 H0Z"></path>
+              <path class="chart-line" d="M0 101 C35 96 54 76 82 82 S128 105 158 73 S210 31 246 51 S295 89 329 61 S367 31 403 44 S462 67 520 18"></path>
+              <circle cx="520" cy="18" r="5"></circle>
+            </svg>
+          </div>
+
+          <div class="board-metrics">
+            <div>
+              <strong data-metric="current">00</strong>
+              <span>进行中</span>
+            </div>
+            <div>
+              <strong data-metric="completed">01</strong>
+              <span>已完成作品</span>
+            </div>
+            <div>
+              <strong data-metric="logs">00</strong>
+              <span>实验日志</span>
+            </div>
+          </div>
+
+          <div class="board-task">
+            <div class="task-index">NOW</div>
+            <div>
+              <span>当前状态</span>
+              <p>学习整理器第一版已完成，等待真实使用反馈。</p>
+            </div>
+            <span class="task-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">01 / CURRENT</span>
+            <h2 id="projects-title">当前实验</h2>
+          </div>
+          <p>正在被测试、修改和推翻的想法。进度不是承诺，只代表目前的完成程度。</p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-shell completed-section" id="completed" aria-labelledby="completed-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">02 / ARCHIVE</span>
+            <h2 id="completed-title">已完成项目</h2>
+          </div>
+          <p>能够独立运行的小工具。完成不代表完美，只代表它已经足够解决最初的问题。</p>
+        </div>
+        <div class="project-grid project-grid-compact" id="completed-grid"></div>
+      </div>
+    </section>
+
+    <section class="section-shell logs-section" id="logs" aria-labelledby="logs-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-index">03 / NOTES</span>
+            <h2 id="logs-title">实验日志</h2>
+          </div>
+          <p>记录用了什么方法、哪里出了问题，以及下一次会怎样改。</p>
+        </div>
+        <div class="log-list" id="log-list"></div>
+      </div>
+    </section>
+
+    <section class="section-shell about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="section-index">04 / ABOUT</span>
+          <h2 id="about-title">一个持续运行的<br>个人实验室。</h2>
+          <p>
+            AI实验室不是一家公司，也不是作品包装页。它记录一名普通学生怎样借助 AI 和 Codex，把模糊问题拆成可以验证的小实验。
+          </p>
+          <p>
+            这里只展示已经实际完成、能够直接使用的项目；暂时没有真实内容的板块会保持空白。
+          </p>
+        </div>
+        <div class="principles reveal" aria-label="实验室原则">
+          <article>
+            <span class="principle-no">01</span>
+            <div>
+              <h3>先做最小闭环</h3>
+              <p>先让一个完整流程跑起来，再决定是否扩写。</p>
+            </div>
+          </article>
+          <article>
+            <span class="principle-no">02</span>
+            <div>
+              <h3>留下失败证据</h3>
+              <p>无效提示词、错误方向和返工原因同样值得记录。</p>
+            </div>
+          </article>
+          <article>
+            <span class="principle-no">03</span>
+            <div>
+              <h3>公开可验证结果</h3>
+              <p>用数字、过程和实际效果代替模糊的“效果不错”。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-mark.svg" width="30" height="30" alt="">
+        <span>AI实验室</span>
+      </div>
+      <p>用 AI 做东西，并记录真实结果。</p>
+      <span>© <span id="current-year">2026</span> · 真实项目记录 · 持续更新</span>
+    </div>
+  </footer>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="关闭详情">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+      </button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <div class="noscript-note">这个页面需要启用 JavaScript 才能展示项目与日志内容。</div>
+  </noscript>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
