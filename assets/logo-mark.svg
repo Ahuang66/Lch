@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title">
   <title id="logo-title">AI实验室标志</title>
-  <rect width="64" height="64" rx="17" fill="#15201d"/>
-  <path d="M12 22h40M12 32h40M12 42h40M22 12v40M32 12v40M42 12v40" stroke="#91a99f" stroke-opacity=".13"/>
-  <path d="M18 44 29 18h7l11 26h-8l-2-6H27l-2 6h-7Zm11-12h5l-2.5-7-2.5 7Z" fill="#effaf6"/>
-  <path d="M42 27h8v8h-8z" fill="#1769d2"/>
-  <circle cx="46" cy="31" r="2" fill="#effaf6"/>
-  <path d="M18 49h28" stroke="#40d3ae" stroke-width="2" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="3" fill="#264ed5"/>
+  <path d="M15 46 29 17h6l14 29h-7l-3-7H25l-3 7Zm13-13h8l-4-10Z" fill="#f6f5f0"/>
+  <circle cx="49" cy="17" r="3" fill="#f6f5f0"/>
 </svg>
